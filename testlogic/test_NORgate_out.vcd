@@ -1,0 +1,35 @@
+$date
+	Fri Oct 08 12:39:26 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module tb_NORgate $end
+$var wire 1 ! F $end
+$var reg 1 " A $end
+$var reg 1 # B $end
+$scope module NOR $end
+$var wire 1 " A $end
+$var wire 1 # B $end
+$var wire 1 ! F $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0#
+0"
+1!
+$end
+#10000
+0!
+1#
+#20000
+0#
+1"
+#30000
+1#
+#40000

@@ -1,0 +1,35 @@
+$date
+	Tue Oct 05 23:15:33 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module tb_ORgate $end
+$var wire 1 ! F $end
+$var reg 1 " A $end
+$var reg 1 # B $end
+$scope module OR $end
+$var wire 1 " A $end
+$var wire 1 # B $end
+$var wire 1 ! F $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0#
+0"
+0!
+$end
+#10000
+1!
+1#
+#20000
+0#
+1"
+#30000
+1#
+#40000

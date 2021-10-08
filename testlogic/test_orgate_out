@@ -1,0 +1,60 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 11;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000015541ecede0 .scope module, "tb_ORgate" "tb_ORgate" 2 3;
+ .timescale -9 -11;
+v0000015541ecaeb0_0 .var "A", 0 0;
+v0000015541ecc4a0_0 .var "B", 0 0;
+v0000015541ecc540_0 .net "F", 0 0, L_0000015541d73060;  1 drivers
+S_0000015541ecc310 .scope module, "OR" "ORgate" 2 6, 3 2 0, S_0000015541ecede0;
+ .timescale -9 -11;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "F";
+L_0000015541d73060 .functor OR 1, v0000015541ecaeb0_0, v0000015541ecc4a0_0, C4<0>, C4<0>;
+v0000015541d73400_0 .net "A", 0 0, v0000015541ecaeb0_0;  1 drivers
+v0000015541d73260_0 .net "B", 0 0, v0000015541ecc4a0_0;  1 drivers
+v0000015541d72fc0_0 .net "F", 0 0, L_0000015541d73060;  alias, 1 drivers
+    .scope S_0000015541ecede0;
+T_0 ;
+    %vpi_call 2 12 "$dumpfile", "test_ORgate_out.vcd" {0 0 0};
+    %vpi_call 2 13 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000015541ecede0 {0 0 0};
+    %vpi_call 2 14 "$monitor", "%b", v0000015541ecc540_0 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0000015541ecede0;
+T_1 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000015541ecaeb0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000015541ecc4a0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000015541ecaeb0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000015541ecc4a0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000015541ecaeb0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000015541ecc4a0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000015541ecaeb0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000015541ecc4a0_0, 0, 1;
+    %delay 10000, 0;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_orgate.v";
+    "orgate.v";
